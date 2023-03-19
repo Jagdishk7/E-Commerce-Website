@@ -41,6 +41,13 @@ const mainData = [
     price: "12",
     desc: "Military Pant for Boys"
   },
+  {
+    id: 4,
+    image: "images/clothes/shirts/shirts1.jpg",
+    title: "Indian Casual Kurta",
+    price: "12",
+    desc: "Wedding Kurta for Boys"
+  },
   // {
   //   id: 2,
   //   image: "images/twilightGray.png",
