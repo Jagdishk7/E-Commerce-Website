@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    background-attachment: fixed;
+}
+
+
+.cartMainContainer{
+    background-color: #fff;
+    width: 35vw;
+    height: 75vh;
+    position: fixed;
+    
+    /* top: 15%;
+    left: 32vw; */
+    top: 0;
+    right: 0;
+    margin-top: 6.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px grey;
+    z-index: 3;
+    border-radius: 10px 0 0 10px;
+    transition: .4s ease-in-out;
+    transform:translate(100%)
+}
+
+.cartMainContainer.active{
+    transform:translate(0)
+}
+
+
+.cartContainer{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+    /* border-top: 1px solid #000; */
+    box-shadow: 0 -1px 2px rgb(50, 48, 48);
+    width: 35vw;
+    padding: 1rem 1rem;
+    transition: .4s ease-in-out;
+}
+
+.cartHead{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    width: 35vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .4s ease-in-out;
+
+}
+
+.cartItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    box-shadow: 0 1px 2px grey;
+
+
+}
+
+.cartImg{
+    border-radius: 80%;
+    background-color: rgb(214, 243, 242);
+    padding: .5rem;
+    margin: .5rem;
+    width: 4rem;
+}
+
+.cartTitle{
+    font-size: 1rem;
+}
+
+.cartPrice{
+    font-size: 1rem ;
+}
+
+#overlay{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+    transition: .4s ease-in-out;
+
+}
+
+#overlay.active{
+    /* transition: .4s ease-in-out; */
+
+    opacity: 1;
+    pointer-events: all;
+}
+
+@media (max-width:1150px) {
+    .cartMainContainer,
+    .cartContainer,
+    .cartHead
+    {
+        width: 50vw;
+    }
+}
+@media (max-width:800px) {
+    .cartMainContainer,
+    .cartContainer,
+    .cartHead
+    {
+        width: 98vw;
+    }
+}
+@media (max-width:750px) {
+    .cartMainContainer
+    {
+        margin-top: 5.8rem;
+    }
+}

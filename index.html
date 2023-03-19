@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <title>E-COMMERCE WEBSITE By Jagdeesh Kushwaha</title>
+
+    <!-- Font links -->
+    <script
+      src="https://kit.fontawesome.com/fb00d901ee.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+
+    <!-- EXTERNAL LINKS -->
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/content.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <!-- MAIN CONTAINER -->
+
+    <header id="container" class=" d-flex">
+      <a class="navbar-brand" href="index.html"><div id="shopName" class="logo"><b>S</b>lipcart</div></a>
+      
+      <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+      </ul> -->
+      <div class=" header-mid  ">
+        <ul class="navbar-nav me-auto d-flex align-items-center flex-row">
+          <li class="nav-item"><a class="nav-link active" href="./pages/clothes/clothes.html">Clothes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Headphones</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Watch</a></li>
+        </ul>
+    </div>
+
+            <div data-cart-target=".cartMainContainer" class="d-flex mx-lg-2 mx-sm-0 button">
+              
+              <div class="text-body d-flex align-items-center justify-content-center position-relative mx-3">
+                <!-- <p class="fs-3 mb-0 ">Cart</p> -->
+                <i  class="fa-solid fa-cart-shopping fs-2 p-0"></i>
+                <span
+                  id="badge"
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  0
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </div>
+            </div>
+    </header>
+
+
+    <main>
+      <div
+        class="container-fluid my-2 bg-trasparent section"
+        style="position: relative;"
+      >
+        <h1>Trending</h1>
+        <div
+        id="containerData"
+          class="row row-cols-1 row-cols-xs-2 row-cols-sm-3 row-cols-lg-5 g-3"
+        >
+          <!-- <div class="col">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="https://www.freepnglogos.com/uploads/notebook-png/download-laptop-notebook-png-image-png-image-pngimg-2.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <div class="clearfix mb-3">
+                  <span class="float-start badge rounded-pill bg-primary"
+                    >ASUS Rog</span
+                  >
+                  <span class="float-end price-hp">12354.00&euro;</span>
+                </div>
+                <h5 class="card-title">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Veniam quidem eaque ut eveniet aut quis rerum. Asperiores
+                  accusamus harum ducimus velit odit ut. Saepe, iste optio
+                  laudantium sed aliquam sequi.
+                </h5>
+                <div class="text-center my-4">
+                  <a href="#" class="btn btn-warning">Add To Cart</a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          
+        </div>
+      </div>
+    </main>
+
+    <div class="cartMainContainer">
+      <div class="cartHead">
+        <h3 id="totalItem">Total Items: 0</h3>
+        <h3 id="totalPrice">Total Price: 0</h3>
+        <div data-close-button class="button fs-2">&times;</div>
+      </div>
+      <div id="cartContainer" class="cartContainer"></div>
+    </div>
+    <div class="" id="overlay"></div>
+
+    <!-- CART CONTAINER -->
+
+    <!-- FOOTER -->
+    <footer>
+      <section>
+        <div id="containerFooter">
+          <div id="webFooter">
+            <h3>online store</h3>
+            <p>Headphones</p>
+          </div>
+          <div id="webFooter">
+            <h3>address</h3>
+            <p>chhatarpur</p>
+            <p>madhya pradesh</p>
+            <p>india</p>
+          </div>
+        </div>
+        <div id="credit">
+          <a href="#"> © Jagdeesh Kushwaha </a> &nbsp&nbsp&nbsp |
+          &nbsp&nbsp&nbsp
+          <a href="https://jagdishportfolio.netlify.app/" target="_blank">
+            Portfolio
+          </a>
+        </div>
+      </section>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+
+  <!-- Bootstrap javascript link -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- content JS -->
+</html>

@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main{
+    margin: 8rem 0;
+}
+.button{
+    cursor: pointer;
+}
+/* body {
+  font-family: "Lato", sans-serif;
+} */
+
+h1 {
+  width: 90%;
+  margin: auto;
+  padding: 20px 0;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+#mainContainer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* #containerData {
+  display: grid;
+  grid-gap: 70px 20px;
+  grid-template-columns: repeat(5, 1fr);
+  width: 90%;
+  margin: auto;
+  padding-bottom: 40px;
+} */
+
+/* .card-img {
+  width: 100px !important;
+} */
+
+/* ----------------------------- MEDIA QUERY --------------------------- */
+
+/* @media (max-width: 1248px) {
+  #containerData {
+    grid-template-columns: repeat(4, 1fr);
+  }
+} */
+/* 
+@media (max-width: 1070px) {
+  h1 {
+    font-size: 25px;
+  }
+  #containerData {
+    width: 95%;
+    grid-gap: 10px;
+  }
+}
+@media (max-width: 910px) {
+  #containerData {
+    width: 100%;
+    margin: 50px;
+    display: grid;
+    grid-gap: 70px 20px;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+  }
+} */
+
+/* @media (max-width: 680px) {
+  #containerData {
+    width: 80%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  #containerData {
+    width: 100%;
+    margin: 0;
+    grid-gap: 0px;
+  }
+  .card {
+    scale: 0.8;
+  }
+}
+@media (max-width: 425px) {
+  #containerData {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card {
+    scale: 0.8;
+  }
+} */
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --font1: "Heebo", sans-serif;
+  --font2: "Fira Sans Extra Condensed", sans-serif;
+  --font3: "Roboto", sans-serif;
+}
+body {
+  font-family: var(--font3);
+  background-image: linear-gradient(120deg, #ffffff 0%, #ffffff 100%);
+}
+h2 {
+  font-weight: 900;
+}
+/* .container-fluid {
+  max-width: 1200px;
+} */
+
+.section{
+  padding: 2rem;
+  /* border: 1px solid grey; */
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00000074;
+  max-width: 95vw;
+}
+
+.card {
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: .4s ease;
+  /* transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12); */
+  border: 0;
+  border-radius: 1rem;
+}
+.card-img,
+.card-img-top {
+  border-top-left-radius: calc(1rem - 1px);
+  border-top-right-radius: calc(1rem - 1px);
+}
+.card h5 {
+  overflow: hidden;
+  height: 56px;
+  font-weight: 900;
+  font-size: 1rem;
+}
+.card-img-top {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  padding: 30px;
+}
+.card h2 {
+  font-size: 1rem;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.122), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 768px) {
+  .card-img-top {
+    max-height: 250px;
+  }
+}
+.over-bg {
+  background: rgba(53, 53, 53, 0.85);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 10px;
+}
+.btn {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 5px 50px 5px 50px;
+}
+.box .btn {
+  font-size: 1.5rem;
+}
+@media (max-width: 1025px) {
+  .btn {
+    padding: 5px 40px 5px 40px;
+  }
+}
+@media (max-width: 250px) {
+  .btn {
+    padding: 5px 30px 5px 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .box-img {
+    max-width: 200px;
+  }
+  .thumb-sec {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 370px) {
+  .box .btn {
+    padding: 5px 40px 5px 40px;
+    font-size: 1rem;
+  }
+}
