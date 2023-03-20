@@ -70,7 +70,7 @@ let i = 0;
 containerData.innerHTML = mainData.map(function (data) {
     var { image, title, price, desc } = data;
     return `<div class="col">
-    <div class="card h-100 shadow-sm">
+    <div class="card h-100">
       <img
         src="${image}"
         class="card-img-top card-img"

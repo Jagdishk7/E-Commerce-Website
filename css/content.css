@@ -107,8 +107,9 @@ h1 {
   --font3: "Roboto", sans-serif;
 }
 body {
+  /* overflow-y: scroll; */
   font-family: var(--font3);
-  background-image: linear-gradient(120deg, #ffffff 0%, #ffffff 100%);
+  background-image: linear-gradient(120deg, #ffb948 0%, #45e9c6 100%);
 }
 h2 {
   font-weight: 900;
@@ -118,17 +119,18 @@ h2 {
 } */
 
 .section{
+  background-color: #fff;
   padding: 2rem;
   /* border: 1px solid grey; */
   border-radius: 10px;
-  box-shadow: 0 0 10px #00000074;
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.461);
   max-width: 95vw;
 }
 
 .card {
   background: #fff;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
-  transition: .4s ease;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.213);
+  transition: .2s ease;
   /* transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
     0.3s box-shadow,
     0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12); */
@@ -156,8 +158,9 @@ h2 {
   font-size: 1rem;
 }
 .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.122), 0 4px 8px rgba(0, 0, 0, 0.06);
+  transform: scale(1.005);
+  box-shadow: 0 0 10px #00000074;
+
 }
 
 @media (max-width: 768px) {
@@ -165,13 +168,7 @@ h2 {
     max-height: 250px;
   }
 }
-.over-bg {
-  background: rgba(53, 53, 53, 0.85);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-  border-radius: 10px;
-}
+
 .btn {
   font-size: 1rem;
   font-weight: 500;
