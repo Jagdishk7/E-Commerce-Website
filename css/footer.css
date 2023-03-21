@@ -4,10 +4,77 @@ body
     font-family: 'Lato', sans-serif;
 }
 
+/* Service Section */
+
+#services
+{
+	background: #1d1d1d;
+	background-size: cover;
+	background-position: center;
+	color:#555!important;
+	background-attachment: fixed;
+	padding-top:50px;
+	padding-bottom: 50px;
+}
+
+
+
+#services h1
+{
+	text-align: center;
+	color:#fff!important;
+	padding-bottom: 10px;
+}
+
+#services h1::after
+{
+	content: '';
+	background:#efefef;
+	display: block;
+	height:3px;
+	width:170px;
+	margin: 20px auto 5px;
+}
+#services h3
+{
+	font-weight: 400;
+	color: white;
+	margin: auto;
+}
+#services p
+{
+	font-weight: 400;
+	color: white;
+	margin: auto;
+	margin-top: 20px;
+}
+
+
+#services i
+{
+	
+	color: white;
+}
+
+.icon
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	font-size:40px;
+	margin:20px auto;
+	padding: 20px;
+	height: 80px;
+	width:80px;
+	border:1px solid #fff;
+	border-radius:50%;
+}
+
+
 #containerFooter
 {
     width: 100%;
-    background-color: rgb(29, 29, 29);
+    background-color: #1d1d1d;
     color: white;
     letter-spacing: 1px;
     display: grid;
@@ -54,9 +121,9 @@ mix-blend-mode: exclusion;
 width: calc(100% + 18px);
 height: 0;
 position: absolute;
-bottom: -4px;
-left: -10px;
-transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+top: -4px;
+left: -10px;      
+transition: all .3s ease-in;
 }
 #credit a:hover::after
 {

@@ -75,9 +75,7 @@ const pantsData = [
   }).join('')
 
 
-
   // Shirts Section ===================================================================================
-
 const shirtsData = [
     {
       id: 0,
@@ -153,6 +151,8 @@ const shirtsData = [
   </div>`;
   }).join('')
 
+
+ // T-Shirts Section ===================================================================================
 const tshirtsData = [
     {
       id: 0,
@@ -228,10 +228,12 @@ const tshirtsData = [
   </div>`;
   }).join('')
 
+
+  // ShOrts Section ===================================================================================
 const shortsData = [
     {
       id: 0,
-      image: "../../images/clothes/tshirts/tshirts1.jpg",
+      image: "../../images/clothes/shorts/shorts4.jpg",
       title: "Beats Black",
       price: "12",
       iprice: "20",
@@ -239,7 +241,7 @@ const shortsData = [
     },
     {
       id: 1,
-      image: "../../images/clothes/tshirts/tshirts2.jpg",
+      image: "../../images/clothes/shorts/shorts3.jpg",
       title: "Beats Blue",
       price: "11",
       iprice: "20",
@@ -248,7 +250,7 @@ const shortsData = [
     },
     {
       id: 2,
-      image: "../../images/clothes/tshirts/tshirts8.jpg",
+      image: "../../images/clothes/shorts/shorts4.jpg",
       title: "Beats Red Black",
       price: "12",
       iprice: "20",
@@ -257,7 +259,7 @@ const shortsData = [
     },
     {
       id: 2,
-      image: "../../images/clothes/tshirts/tshirts4.jpg",
+      image: "../../images/clothes/shorts/shorts1.jpg",
       title: "Beats Night Black",
       price: "12",
       iprice: "20",
@@ -266,7 +268,7 @@ const shortsData = [
     },
     {
       id: 2,
-      image: "../../images/clothes/tshirts/tshirts5.jpg",
+      image: "../../images/clothes/shorts/shorts2.jpg",
       title: "Beats Twilight Gray",
       price: "12",
       iprice: "20",
