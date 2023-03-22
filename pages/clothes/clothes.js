@@ -42,12 +42,10 @@ const pantsData = [
   },
 ];
 
-var p=0;
-
+let pant=0;
 const pantsContainer = document.getElementById("pantsContainer");
-pantsContainer.innerHTML = pantsData
-  .map((item) => {
-    var { image, title, price, desc } = item;
+pantsContainer.innerHTML = pantsData.map((item) => {
+  var { image, title, price, desc } = item;
     return `<div class="col">
     <div class="card h-100">
       <img
@@ -66,7 +64,7 @@ pantsContainer.innerHTML = pantsData
           ${desc}
         </h5>
         <div class="text-center my-4">
-        <div class="btn btn-warning" onclick="addToCart(${p++})">Add To Cart</div>
+        <div class="btn btn-warning" onclick="addPantToCart(${pant++})">Add To Cart</div>
         </div>
       </div>
     </div>
@@ -118,9 +116,10 @@ const shirtsData = [
   },
 ];
 
+let shirt=0;
 const shirtsContainer = document.getElementById("shirtsContainer");
 shirtsContainer.innerHTML = shirtsData
-  .map((item) => {
+.map((item) => {
     var { image, title, price, desc } = item;
     return `<div class="col">
     <div class="card h-100">
@@ -140,7 +139,7 @@ shirtsContainer.innerHTML = shirtsData
           ${desc}
         </h5>
         <div class="text-center my-4">
-        <div class="btn btn-warning" onclick="addToCart(})">Add To Cart</div>
+        <div class="btn btn-warning" onclick="addShirtToCart(${shirt++})">Add To Cart</div>
         </div>
       </div>
     </div>
@@ -192,9 +191,10 @@ const tshirtsData = [
   },
 ];
 
+let tshirt=0;
 const tshirtsContainer = document.getElementById("tshirtsContainer");
 tshirtsContainer.innerHTML = tshirtsData
-  .map((item) => {
+.map((item) => {
     var { image, title, price, desc } = item;
     return `<div class="col">
     <div class="card h-100">
@@ -214,7 +214,7 @@ tshirtsContainer.innerHTML = tshirtsData
           ${desc}
         </h5>
         <div class="text-center my-4">
-        <div class="btn btn-warning" onclick="addToCart(})">Add To Cart</div>
+        <div class="btn btn-warning" onclick="addTshirtToCart(${tshirt++})">Add To Cart</div>
         </div>
       </div>
     </div>
@@ -266,9 +266,10 @@ const shortsData = [
   },
 ];
 
+let short = 0;
 const shortsContainer = document.getElementById("shortsContainer");
 shortsContainer.innerHTML = shortsData
-  .map((item) => {
+.map((item) => {
     var { image, title, price, desc } = item;
     return `<div class="col">
     <div class="card h-100">
@@ -288,7 +289,7 @@ shortsContainer.innerHTML = shortsData
           ${desc}
         </h5>
         <div class="text-center my-4">
-        <div class="btn btn-warning" onclick="addToCart(})">Add To Cart</div>
+        <div class="btn btn-warning" onclick="addShortToCart(${short++})">Add To Cart</div>
         </div>
       </div>
     </div>
@@ -302,8 +303,20 @@ shortsContainer.innerHTML = shortsData
 
   var cart = [];
 
-function addToCart(a) {
+function addPantToCart(a) {
   cart.push({ ...pantsData[a] });
+  display();
+}
+function addShirtToCart(a) {
+  cart.push({ ...shirtsData[a] });
+  display();
+}
+function addTshirtToCart(a) {
+  cart.push({ ...tshirtsData[a] });
+  display();
+}
+function addShortToCart(a) {
+  cart.push({ ...shortsData[a] });
   display();
 }
 

@@ -150,7 +150,7 @@ containerData.innerHTML = mainData.map(function (data) {
   })
   .join("");
 
-
+var cart = [];
 function addToCart(a) {
   cart.push({ ...mainData[a] });
   display();
