@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../../css/content.css" />
     <link rel="stylesheet" href="../../css/footer.css" />
     <link rel="stylesheet" href="../../css/clothes.css" />
+    <link rel="stylesheet" href="../../css/cart.css" />
 
     <!-- fonts links -->
     <!-- Font links -->
@@ -68,7 +69,6 @@
 
     <main>
       
-
       <section
       class="container-fluid my-4 bg-trasparent section"
         style="position: relative"
@@ -100,7 +100,19 @@
       <h1>Shorts</h1>
       <div id="shortsContainer" class="row row-cols-2 row-cols-xs-2 row-cols-sm-3 row-cols-lg-5 g-3"></div>
       </section>
+
     </main>
+
+            <!-- CART CONTAINER -->
+            <div class="cartMainContainer">
+              <div class="cartHead">
+                <h3 id="totalItem">Total Items: 0</h3>
+                <h3 id="totalPrice">Total Price: 0</h3>
+                <div data-close-button class="button fs-2">&times;</div>
+              </div>
+              <div id="cartContainer" class="cartContainer"></div>
+            </div>
+            <div class="" id="overlay"></div>
 
 
     <!-- FOOTER -->

@@ -4,7 +4,7 @@
 }
 
 main{
-    margin: 8rem 0;
+    margin: 8rem 0 3rem;
 }
 .button{
     cursor: pointer;
@@ -130,7 +130,7 @@ h2 {
 .card {
   background: #fff;
   box-shadow: 0 0px 5px rgba(0, 0, 0, 0.388);
-  transition: .1s ease;
+  transition: .1s ease-in-out;
   /* transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
     0.3s box-shadow,
     0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12); */
@@ -158,9 +158,18 @@ h2 {
   font-size: 1rem;
 }
 .card:hover {
-  transform: scale(1.005);
+  /* transform: scale(1.005); */
   box-shadow: 0 0 10px #000000a4;
 
+}
+.price{
+  background-color: #0dff0073;
+padding: 0 .4rem;
+border-radius: 2rem;
+box-shadow: 0 2px 2px #52525295;
+color: #000000;
+font-size: .8rem;
+font-weight: 700;
 }
 
 

@@ -76,7 +76,7 @@
           ${desc}
         </h5>
         <div class="text-center my-4">
-          <a href="#" class="btn btn-warning" onclick="addToCart(})">Add To Cart</a>
+        <div class="btn btn-warning" onclick="addToCart(})">Add To Cart</div>
         </div>
       </div>
     </div>

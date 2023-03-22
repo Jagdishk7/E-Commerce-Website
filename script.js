@@ -16,15 +16,7 @@ const mainData = [
   //   desc: "Blue Color Headphone by Beats which  brings you the best in headphones and music, plus all things culture, style, and sports."
 
   // },
-  // {
-  //   id: 2,
-  //   image: "images/redBlack.png",
-  //   title: "Beats Red Black",
-  //   price: "12",
-  //   iprice: "20",
-  //   desc: "RedBlack Color Headphone by Beats which  brings you the best in headphones and music, plus all things culture, style, and sports."
-
-  // },
+ 
   {
     id: 2,
     image: "images/headphones/nightBlack.png",
@@ -48,13 +40,61 @@ const mainData = [
     price: "12",
     desc: "Wedding Kurta for Boys"
   },
-  // {
-  //   id: 2,
-  //   image: "images/twilightGray.png",
-  //   title: "Beats Twilight Gray",
-  //   price: "12",
-  //   iprice: "20",
-  //   desc: "Twilight Gray Color Headphone by Beats which  brings you the best in headphones and music, plus all things culture, style, and sports."
+  {
+    id: 4,
+    image: "images/clothes/tshirts/tshirts4.jpg",
+    title: "Black Panther T-Shirt",
+    price: "12",
+    desc: "Stylish T-Shirts for Boys"
+  },
+  {
+    id: 4,
+    image: "images/shoes/shoes4.jpg",
+    title: "Black Panther T-Shirt",
+    price: "12",
+    desc: "Stylish T-Shirts for Boys"
+  },
+  {
+    id: 2,
+    image: "images/bags/bag11.jpg",
+    title: "Beats Red Black",
+    price: "12",
+    iprice: "20",
+    desc: "RedBlack Color Headphone by Beats which  brings you the best in headphones and music, plus all things culture, style, and sports."
+  },
+  {
+    id: 2,
+    image: "images/furnitures/bed1.jpg",
+    title: "Beats Red Black",
+    price: "12",
+    iprice: "20",
+    desc: "RedBlack Color Headphone by Beats which  brings you the best in headphones and music, plus all things culture, style, and sports."
+  },
+  {
+    id: 2,
+    image: "images/furnitures/sofa1.jpg",
+    title: "Beats Red Black",
+    price: "12",
+    iprice: "20",
+    desc: "RedBlack Color Headphone by Beats which  brings you the best in headphones and music, plus all things culture, style, and sports."
+  },
+  {
+    id: 2,
+    image: "images/furnitures/mirror1.jpg",
+    title: "Beats Red Black",
+    price: "12",
+    iprice: "20",
+    desc: "RedBlack Color Headphone by Beats which  brings you the best in headphones and music, plus all things culture, style, and sports."
+  },
+  {
+    id: 2,
+    image: "images/jewllery/jewllery3.jpg",
+    title: "Beats Red Black",
+    price: "12",
+    iprice: "20",
+    desc: "RedBlack Color Headphone by Beats which  brings you the best in headphones and music, plus all things culture, style, and sports."
+  },
+  
 
   // }
 ];
@@ -81,13 +121,13 @@ containerData.innerHTML = mainData.map(function (data) {
           <span class="float-start badge rounded-pill bg-primary"
             >${title}</span
           >
-          <span class="float-end price-hp">${price}&euro;</span>
+          <span class="float-end price price-hp">${price}&euro;</span>
         </div>
         <h5 class="card-title">
           ${desc}
         </h5>
         <div class="text-center my-4">
-          <a href="#" class="btn btn-warning" onclick="addToCart(${i++})">Add To Cart</a>
+          <div class="btn btn-warning" onclick="addToCart(${i++})">Add To Cart</div>
         </div>
       </div>
     </div>
@@ -110,7 +150,6 @@ containerData.innerHTML = mainData.map(function (data) {
   })
   .join("");
 
-var cart = [];
 
 function addToCart(a) {
   cart.push({ ...mainData[a] });
@@ -138,7 +177,7 @@ function display() {
 
   } else {
     
-    const cartContainer = document.getElementById("cartContainer");
+    const cartContainer = document.querySelector('.cartContainer');
     cartContainer.innerHTML = cart.map(function (item) {
       
       var { image, title, price } = item;
@@ -194,3 +233,6 @@ function closeCart(cart) {
   cart.classList.remove("active");
   overlay.classList.remove("active");
 }
+
+
+

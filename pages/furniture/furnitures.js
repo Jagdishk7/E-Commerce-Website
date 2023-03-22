@@ -43,8 +43,7 @@ const bedsData = [
 ];
 
 const bedsContainer = document.getElementById("bedsContainer");
-bedsContainer.innerHTML = bedsData
-  .map((item) => {
+bedsContainer.innerHTML = bedsData.map((item) => {
     var { image, title, price, desc } = item;
     return `<div class="col">
     <div class="card h-100">
@@ -58,13 +57,13 @@ bedsContainer.innerHTML = bedsData
           <span class="float-start badge rounded-pill bg-primary"
             >${title}</span
           >
-          <span class="float-end price-hp">${price}&euro;</span>
+          <span class="float-end price price-hp">${price}&euro;</span>
         </div>
         <h5 class="card-title">
           ${desc}
         </h5>
         <div class="text-center my-4">
-          <a href="#" class="btn btn-warning" onclick="addToCart(})">Add To Cart</a>
+          <div class="btn btn-warning" onclick="addToCart(})">Add To Cart</div>
         </div>
       </div>
     </div>
@@ -119,8 +118,7 @@ const sofaData = [
 ];
 
 const sofaContainer = document.getElementById("sofaContainer");
-sofaContainer.innerHTML = sofaData
-  .map((item) => {
+sofaContainer.innerHTML = sofaData.map((item) => {
     var { image, title, price, desc } = item;
     return `<div class="col">
       <div class="card h-100">
@@ -134,13 +132,13 @@ sofaContainer.innerHTML = sofaData
             <span class="float-start badge rounded-pill bg-primary"
               >${title}</span
             >
-            <span class="float-end price-hp">${price}&euro;</span>
+            <span class="float-end price price-hp">${price}&euro;</span>
           </div>
           <h5 class="card-title">
             ${desc}
           </h5>
           <div class="text-center my-4">
-            <a href="#" class="btn btn-warning" onclick="addToCart(})">Add To Cart</a>
+          <div class="btn btn-warning" onclick="addToCart(})">Add To Cart</div>
           </div>
         </div>
       </div>
@@ -209,13 +207,13 @@ mirrorContainer.innerHTML = mirrorData.map((item) => {
                 <span class="float-start badge rounded-pill bg-primary"
                   >${title}</span
                 >
-                <span class="float-end price-hp">${price}&euro;</span>
+                <span class="float-end price price-hp">${price}&euro;</span>
               </div>
               <h5 class="card-title">
                 ${desc}
               </h5>
               <div class="text-center my-4">
-                <a href="#" class="btn btn-warning" onclick="addToCart(})">Add To Cart</a>
+              <div class="btn btn-warning" onclick="addToCart(})">Add To Cart</div>
               </div>
             </div>
           </div>
@@ -283,13 +281,13 @@ tableContainer.innerHTML = tableData.map((item) => {
                 <span class="float-start badge rounded-pill bg-primary"
                   >${title}</span
                 >
-                <span class="float-end price-hp">${price}&euro;</span>
+                <span class="float-end price price-hp">${price}&euro;</span>
               </div>
               <h5 class="card-title">
                 ${desc}
               </h5>
               <div class="text-center my-4">
-                <a href="#" class="btn btn-warning" onclick="addToCart(})">Add To Cart</a>
+              <div class="btn btn-warning" onclick="addToCart(})">Add To Cart</div>
               </div>
             </div>
           </div>
