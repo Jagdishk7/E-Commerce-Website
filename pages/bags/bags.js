@@ -99,7 +99,7 @@
   
     },
   ];
-  
+  let bag = 0;
   const bagsContainer = document.getElementById('bagsContainer');
   bagsContainer.innerHTML = bagsData.map((item)=>{
     var{image,title,price,desc} = item;
@@ -115,15 +115,105 @@
           <span class="float-start badge rounded-pill bg-primary"
             >${title}</span
           >
-          <span class="float-end price-hp">${price}&euro;</span>
+          <span class="float-end price price-hp">${price}&euro;</span>
         </div>
         <h5 class="card-title">
           ${desc}
         </h5>
         <div class="text-center my-4">
-        <div class="btn btn-warning" onclick="addToCart(})">Add To Cart</div>
+        <div class="btn btn-warning" onclick="addBegToCart(${bag++})">Add To Cart</div>
         </div>
       </div>
     </div>
   </div>`;
   }).join('')
+
+  // CART ====================================================================================
+
+  var cart = [];
+
+  function addBegToCart(a) {
+    cart.push({ ...bagsData[a] });
+    display();
+  }
+  
+  function deleteFromCart(a) {
+    cart.splice(a, 1);
+  
+    display();
+    // total=total-parseInt(price);
+  }
+  
+  function display() {
+    let j = 0;
+    var total = 0;
+  
+    document.getElementById("badge").innerText = cart.length;
+    document.getElementById("totalItem").innerText =
+      "Total Items : " + cart.length;
+  
+    if (cart.length == 0) {
+      document.getElementById("cartContainer").innerHTML =
+        "<h3>Your Cart is Empty</h3>";
+      document.getElementById("totalPrice").innerHTML =
+        "Total Price : " + "00.00" + "&euro;";
+    } else {
+      const cartContainer = document.querySelector(".cartContainer");
+      cartContainer.innerHTML = cart
+        .map(function (item) {
+          var { image, title, price } = item;
+          total = total + parseInt(price);
+          document.getElementById("totalPrice").innerHTML =
+            "Total Price : " + total + "&euro;";
+          return `<div class="cartItem">
+        <img src="${image}" class="cartImg" alt="" />
+        <h5 class="cartTitle title">${title}</h5>
+        <div class="d-flex align-items-center">
+        <p class="cartPrice text-success my-1">${price}&euro;</p>
+        <i class="fa-solid fa-trash button mx-3" onclick="deleteFromCart(${j++})"></i>
+        <button class="btn btn-primary">Buy</button>
+        </div>
+        </div>`;
+        })
+        .join("");
+    }
+  }
+  
+  // ========================== CART Component Toggle =======================================
+  
+  const openCartButtons = document.querySelectorAll("[data-cart-target]");
+  const closeCartButtons = document.querySelectorAll("[data-close-button]");
+  const overlay = document.getElementById("overlay");
+  
+  openCartButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const cart = document.querySelector(button.dataset.cartTarget);
+      openCart(cart);
+    });
+  });
+  closeCartButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const cart = button.closest(".cartMainContainer");
+      closeCart(cart);
+    });
+  });
+  
+  overlay.addEventListener("click", () => {
+    const closeOverlay = document.querySelectorAll(".cartMainContainer.active");
+    closeOverlay.forEach((close) => {
+      closeCart(close);
+    });
+  });
+  
+  function openCart(cart) {
+    if (cart == null) return;
+    cart.classList.add("active");
+    overlay.classList.add("active");
+  }
+  
+  function closeCart(cart) {
+    if (cart == null) return;
+    cart.classList.remove("active");
+    overlay.classList.remove("active");
+  }
+  

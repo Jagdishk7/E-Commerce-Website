@@ -41,7 +41,7 @@ const bedsData = [
     desc: "Twilight Gray Color Headphone by Beats which  brings you the best in headphones and music, plus all things culture, style, and sports.",
   },
 ];
-
+let beds = 0;
 const bedsContainer = document.getElementById("bedsContainer");
 bedsContainer.innerHTML = bedsData.map((item) => {
     var { image, title, price, desc } = item;
@@ -63,7 +63,7 @@ bedsContainer.innerHTML = bedsData.map((item) => {
           ${desc}
         </h5>
         <div class="text-center my-4">
-          <div class="btn btn-warning" onclick="addToCart(})">Add To Cart</div>
+          <div class="btn btn-warning" onclick="addBedToCart(${beds++})">Add To Cart</div>
         </div>
       </div>
     </div>
@@ -116,6 +116,7 @@ const sofaData = [
     desc: "Twilight Gray Color Headphone by Beats which  brings you the best in headphones and music, plus all things culture, style, and sports.",
   },
 ];
+let sofa = 0;
 
 const sofaContainer = document.getElementById("sofaContainer");
 sofaContainer.innerHTML = sofaData.map((item) => {
@@ -138,7 +139,7 @@ sofaContainer.innerHTML = sofaData.map((item) => {
             ${desc}
           </h5>
           <div class="text-center my-4">
-          <div class="btn btn-warning" onclick="addToCart(})">Add To Cart</div>
+          <div class="btn btn-warning" onclick="addSofaToCart(${sofa++})">Add To Cart</div>
           </div>
         </div>
       </div>
@@ -191,6 +192,7 @@ const mirrorData = [
     desc: "Twilight Gray Color Headphone by Beats which  brings you the best in headphones and music, plus all things culture, style, and sports.",
   },
 ];
+let mirror = 0;
 
 const mirrorContainer = document.getElementById("mirrorContainer");
 mirrorContainer.innerHTML = mirrorData.map((item) => {
@@ -213,7 +215,7 @@ mirrorContainer.innerHTML = mirrorData.map((item) => {
                 ${desc}
               </h5>
               <div class="text-center my-4">
-              <div class="btn btn-warning" onclick="addToCart(})">Add To Cart</div>
+              <div class="btn btn-warning" onclick="addMirrorToCart(${mirror++})">Add To Cart</div>
               </div>
             </div>
           </div>
@@ -265,7 +267,7 @@ const tableData = [
     desc: "Twilight Gray Color Headphone by Beats which  brings you the best in headphones and music, plus all things culture, style, and sports.",
   },
 ];
-
+let table = 0;
 const tableContainer = document.getElementById("tableContainer");
 tableContainer.innerHTML = tableData.map((item) => {
     var { image, title, price, desc } = item;
@@ -287,10 +289,113 @@ tableContainer.innerHTML = tableData.map((item) => {
                 ${desc}
               </h5>
               <div class="text-center my-4">
-              <div class="btn btn-warning" onclick="addToCart(})">Add To Cart</div>
+              <div class="btn btn-warning" onclick="addTableToCart(${table++})">Add To Cart</div>
               </div>
             </div>
           </div>
         </div>`;
   })
   .join("");
+
+
+   // CART ====================================================================================
+
+   var cart = [];
+
+   function addBedToCart(a) {
+     cart.push({ ...bedsData[a] });
+     display();
+   }
+   function addSofaToCart(a) {
+     cart.push({ ...sofaData[a] });
+     display();
+   }
+   function addMirrorToCart(a) {
+     cart.push({ ...mirrorData[a] });
+     display();
+   }
+   function addTableToCart(a) {
+     cart.push({ ...tableData[a] });
+     display();
+   }
+   
+   function deleteFromCart(a) {
+     cart.splice(a, 1);
+   
+     display();
+     // total=total-parseInt(price);
+   }
+   
+   function display() {
+     let j = 0;
+     var total = 0;
+   
+     document.getElementById("badge").innerText = cart.length;
+     document.getElementById("totalItem").innerText =
+       "Total Items : " + cart.length;
+   
+     if (cart.length == 0) {
+       document.getElementById("cartContainer").innerHTML =
+         "<h3>Your Cart is Empty</h3>";
+       document.getElementById("totalPrice").innerHTML =
+         "Total Price : " + "00.00" + "&euro;";
+     } else {
+       const cartContainer = document.querySelector(".cartContainer");
+       cartContainer.innerHTML = cart
+         .map(function (item) {
+           var { image, title, price } = item;
+           total = total + parseInt(price);
+           document.getElementById("totalPrice").innerHTML =
+             "Total Price : " + total + "&euro;";
+           return `<div class="cartItem">
+         <img src="${image}" class="cartImg" alt="" />
+         <h5 class="cartTitle title">${title}</h5>
+         <div class="d-flex align-items-center">
+         <p class="cartPrice text-success my-1">${price}&euro;</p>
+         <i class="fa-solid fa-trash button mx-3" onclick="deleteFromCart(${j++})"></i>
+         <button class="btn btn-primary">Buy</button>
+         </div>
+         </div>`;
+         })
+         .join("");
+     }
+   }
+   
+   // ========================== CART Component Toggle =======================================
+   
+   const openCartButtons = document.querySelectorAll("[data-cart-target]");
+   const closeCartButtons = document.querySelectorAll("[data-close-button]");
+   const overlay = document.getElementById("overlay");
+   
+   openCartButtons.forEach((button) => {
+     button.addEventListener("click", () => {
+       const cart = document.querySelector(button.dataset.cartTarget);
+       openCart(cart);
+     });
+   });
+   closeCartButtons.forEach((button) => {
+     button.addEventListener("click", () => {
+       const cart = button.closest(".cartMainContainer");
+       closeCart(cart);
+     });
+   });
+   
+   overlay.addEventListener("click", () => {
+     const closeOverlay = document.querySelectorAll(".cartMainContainer.active");
+     closeOverlay.forEach((close) => {
+       closeCart(close);
+     });
+   });
+   
+   function openCart(cart) {
+     if (cart == null) return;
+     cart.classList.add("active");
+     overlay.classList.add("active");
+   }
+   
+   function closeCart(cart) {
+     if (cart == null) return;
+     cart.classList.remove("active");
+     overlay.classList.remove("active");
+   }
+   

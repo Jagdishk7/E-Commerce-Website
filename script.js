@@ -21,7 +21,7 @@ const mainData = [
     id: 2,
     image: "images/headphones/nightBlack.png",
     title: "Beats Night Black",
-    price: "12",
+    price: "1599",
     iprice: "20",
     desc: "Night Black Color Headphone by Beats which  brings you the best in headphones and music, plus all things culture, style, and sports."
 
@@ -30,69 +30,69 @@ const mainData = [
     id: 3,
     image: "images/clothes/pants/pants1.jpg",
     title: "Army Pant",
-    price: "12",
-    desc: "Military Pant for Boys"
+    price: "800",
+    desc: "Military Pant for Boys, an outer garment extending from the waist to the ankle and covering each leg separately"
   },
   {
     id: 4,
     image: "images/clothes/shirts/shirts1.jpg",
     title: "Indian Casual Kurta",
     price: "12",
-    desc: "Wedding Kurta for Boys"
+    desc: "Wedding Kurta for Boys, a garment for the upper part of the body"
   },
   {
     id: 4,
     image: "images/clothes/tshirts/tshirts4.jpg",
     title: "Black Panther T-Shirt",
     price: "12",
-    desc: "Stylish T-Shirts for Boys"
+    desc: "Stylish T-Shirts for Boys, a garment for the upper part of the body"
   },
   {
     id: 4,
     image: "images/shoes/shoes4.jpg",
-    title: "Black Panther T-Shirt",
-    price: "12",
-    desc: "Stylish T-Shirts for Boys"
+    title: "Military Boots",
+    price: "899",
+    desc: "Leather Army Shoes, covering for the human foot typically having a thick or stiff sole with an attached heel and an upper part of lighter material (such as leather)"
   },
   {
     id: 2,
     image: "images/bags/bag11.jpg",
-    title: "Beats Red Black",
+    title: "Hex",
     price: "12",
     iprice: "20",
-    desc: "RedBlack Color Headphone by Beats which  brings you the best in headphones and music, plus all things culture, style, and sports."
+    desc: "School Bag for kids, to transport different materials like exercise books, pencil box, water bottle and a lunchbox to and from school."
   },
   {
     id: 2,
     image: "images/furnitures/bed1.jpg",
-    title: "Beats Red Black",
+    title: "Premium plywood bed",
     price: "12",
     iprice: "20",
-    desc: "RedBlack Color Headphone by Beats which  brings you the best in headphones and music, plus all things culture, style, and sports."
+    desc: "A piece of furniture on or in which to lie and sleep also the equipment and services needed to care for one hospitalized patient or hotel guest"
   },
   {
     id: 2,
     image: "images/furnitures/sofa1.jpg",
-    title: "Beats Red Black",
+    title: "Sofa Set",
     price: "12",
     iprice: "20",
-    desc: "RedBlack Color Headphone by Beats which  brings you the best in headphones and music, plus all things culture, style, and sports."
+    desc: "a comfortable seat with a back and arms for two or more people to sit on"
   },
   {
     id: 2,
     image: "images/furnitures/mirror1.jpg",
-    title: "Beats Red Black",
+    title: "TATA Mirror",
     price: "12",
     iprice: "20",
-    desc: "RedBlack Color Headphone by Beats which  brings you the best in headphones and music, plus all things culture, style, and sports."
+    desc: "a piece of special flat glass that you can look into in order to see yourself or what is behind you"
   },
   {
     id: 2,
     image: "images/jewllery/jewllery3.jpg",
-    title: "Beats Red Black",
+    title: "Diamond Necklace",
     price: "12",
     iprice: "20",
-    desc: "RedBlack Color Headphone by Beats which  brings you the best in headphones and music, plus all things culture, style, and sports."
+    desc: "A jewellery that is worn around the neck. Necklaces may have been one of the earliest types of adornment worn by humans."
   },
   
 
@@ -121,7 +121,7 @@ containerData.innerHTML = mainData.map(function (data) {
           <span class="float-start badge rounded-pill bg-primary"
             >${title}</span
           >
-          <span class="float-end price price-hp">${price}&euro;</span>
+          <span class="float-end price price-hp">&#8377;${price}</span>
         </div>
         <h5 class="card-title">
           ${desc}

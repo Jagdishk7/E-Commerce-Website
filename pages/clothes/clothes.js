@@ -58,7 +58,7 @@ pantsContainer.innerHTML = pantsData.map((item) => {
           <span class="float-start badge rounded-pill bg-primary"
             >${title}</span
           >
-          <span class="float-end price-hp">${price}&euro;</span>
+          <span class="float-end price price-hp">&#8377;${price}</span>
         </div>
         <h5 class="card-title">
           ${desc}
@@ -133,7 +133,7 @@ shirtsContainer.innerHTML = shirtsData
           <span class="float-start badge rounded-pill bg-primary"
             >${title}</span
           >
-          <span class="float-end price-hp">${price}&euro;</span>
+          <span class="float-end price price-hp">&#8377;${price}</span>
         </div>
         <h5 class="card-title">
           ${desc}
@@ -208,7 +208,7 @@ tshirtsContainer.innerHTML = tshirtsData
           <span class="float-start badge rounded-pill bg-primary"
             >${title}</span
           >
-          <span class="float-end price-hp">${price}&euro;</span>
+          <span class="float-end price price-hp">&#8377;${price}</span>
         </div>
         <h5 class="card-title">
           ${desc}
@@ -283,7 +283,7 @@ shortsContainer.innerHTML = shortsData
           <span class="float-start badge rounded-pill bg-primary"
             >${title}</span
           >
-          <span class="float-end price-hp">${price}&euro;</span>
+          <span class="float-end price price-hp">&#8377;${price}</span>
         </div>
         <h5 class="card-title">
           ${desc}
